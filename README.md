@@ -29,3 +29,13 @@ The system runs as a real data pipeline:
 
 The project is structured as a modular system:
 
+```text
+src/
+├── collector.py # Fetches product title and price from a URL
+├── storage.py # Saves price history with timestamp and URL
+├── analysis.py # Analyzes historical data and triggers alerts
+├── notifier.py # Sends email alerts
+├── main.py # Orchestrates the full workflow
+data/
+└── prices.csv # Historical price database (not committed to GitHub)
+```
