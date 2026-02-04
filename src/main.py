@@ -5,6 +5,7 @@ from analysis import check_alert
 
 WATCHLIST_FILE = "data/watchlist.csv"
 
+#Product Description
 def register_product():
     print("\n--- Add Product to Watchlist ---")
     email = input("Enter your email: ")
