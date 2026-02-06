@@ -5,6 +5,7 @@ from collector import get_product_data
 from storage import save_price
 from analysis import check_alert
 
+# API Call
 app = FastAPI()
 
 WATCHLIST_FILE = "data/watchlist.csv"
