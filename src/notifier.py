@@ -1,9 +1,10 @@
 import smtplib
 from email.mime.text import MIMEText
 
+# 
 def send_email_alert(to_email, product, current, target):
-    from_email = "zzephyrr02@gmail.com"
-    app_password = "fidhofwxkfivjmti"
+    from_email = "abc_@gmail.com"
+    app_password = "xyz"
 
     subject = "WatchMyCart Alert!"
     body = f"""
