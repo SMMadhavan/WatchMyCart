@@ -1,7 +1,7 @@
 import csv
 from datetime import datetime
 
-#Function Definition
+# Function Definition for Storing Product Info
 def save_price(url, title, price):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
