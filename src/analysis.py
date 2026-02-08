@@ -1,5 +1,7 @@
 import csv
+from notifier import send_email_alert
 
+# Function Definition
 def analyze_prices(target_url):
     prices = []
 
@@ -29,7 +31,7 @@ def analyze_prices(target_url):
     else:
         print("Signal: Price is normal or high.")
 
-def check_alert(target_url, target_price):
+def check_alert(target_url, target_price, user_email):
     with open("data/prices.csv", "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         rows = [row for row in reader if row["url"] == target_url]
@@ -37,10 +39,13 @@ def check_alert(target_url, target_price):
     if not rows:
         return
 
-    latest_price = float(rows[-1]["price"].replace("Â", "").strip())
+    latest = rows[-1]
+    latest_price = float(latest["price"].replace("Â", "").strip())
+    product = latest["product"]
 
     if latest_price <= target_price:
         print("ALERT: Price reached your target!")
-        print("Current:", latest_price, "Target:", target_price)
+        send_email_alert(user_email, product, latest_price, target_price)
     else:
         print("No alert. Waiting for price drop.")
+
