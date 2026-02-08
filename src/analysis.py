@@ -1,7 +1,7 @@
 import csv
 from notifier import send_email_alert
 
-# Function Definition
+# Function Definition for Price Analysis
 def analyze_prices(target_url):
     prices = []
 
