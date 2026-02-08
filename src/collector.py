@@ -8,7 +8,7 @@ def get_product_data(url):
     title = soup.find("h1").text
     price = soup.find("p", class_="price_color").text
 
-    # Clean weird characters and ambiguity
+    # Clean weird characters and Eliminate ambiguity
     price = price.replace("£", "").replace("Â", "").strip()
 
     return title, price
