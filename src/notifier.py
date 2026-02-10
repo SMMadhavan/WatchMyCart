@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 
 # Mail Alert
 def send_email_alert(to_email, product, current, target):
-    from_email = "abc_@gmail.com"
+    from_email = "abc@gmail.com"
     app_password = "xyz"
 
     subject = "WatchMyCart Alert!"
