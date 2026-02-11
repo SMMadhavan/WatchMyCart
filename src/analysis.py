@@ -31,6 +31,7 @@ def analyze_prices(target_url):
     else:
         print("Signal: Price is normal or high.")
 
+# Function for Checking Alert
 def check_alert(target_url, target_price, user_email):
     with open("data/prices.csv", "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
