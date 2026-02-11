@@ -1,4 +1,3 @@
-csv
 Flask
 smtplib
 requests
