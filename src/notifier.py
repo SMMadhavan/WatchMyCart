@@ -1,7 +1,7 @@
 import smtplib
 from email.mime.text import MIMEText
 
-# Mail Alert to User
+# Mail Alert to User/Client
 def send_email_alert(to_email, product, current, target):
     from_email = "abc.......@gmail.com"
     app_password = "xyz"
