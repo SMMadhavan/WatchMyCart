@@ -3,7 +3,6 @@ from collector import get_product_data
 from storage import save_price
 from analysis import analyze_prices, check_alert
 
-#Flask Integration
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
