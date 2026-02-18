@@ -9,3 +9,4 @@ def save_price(url, title, price):
     with open("data/prices.csv", "a", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerow([timestamp, url, title, price])
+# --------------------------------------------------------
