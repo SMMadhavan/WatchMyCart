@@ -12,5 +12,5 @@ def save_price(url, title, price):
 # --------------------------------------------------------
 
 '''
-Storage of the Product Info is feed into the csv file inside data\prices
+Storage of the Product Info is feed into the csv file inside data\prices.csv
 '''
